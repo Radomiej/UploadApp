@@ -49,9 +49,15 @@
         <Reference Include="WindowsBase" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Actions\ActionEngine.cs" />
+        <Compile Include="Actions\IBaseAction.cs" />
+        <Compile Include="Context\ContextEngine.cs" />
         <Compile Include="Events\AddMenuItemEvent.cs" />
         <Compile Include="Events\ChangeLanguageEvent.cs" />
+        <Compile Include="Events\ContextPropertiesChangedEvent.cs" />
+        <Compile Include="Events\DoActionEvent.cs" />
         <Compile Include="Events\ShowWindowEvent.cs" />
+        <Compile Include="Events\UndoActionEvent.cs" />
         <Compile Include="I18NEngine.cs" />
         <Compile Include="WpfConsole.cs" />
         <Compile Include="Events\FileDeselectedEvent.cs" />

@@ -21,6 +21,7 @@ namespace UploadApp
         {
             InitializeComponent();
             SimpleEventBus.GetDefaultEventBus().Register(this);
+            SimpleEventBus.GetDefaultEventBus().Register(ActionEngine.Instance);
 //            LoadPlugins();
             InitPluginEngine();
         }
