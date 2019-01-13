@@ -29,6 +29,8 @@ namespace UploadApp.Views
         [EventSubscriber]
         public void AddMenuItem(AddMenuItemEvent addMenuItemEvent)
         {
+            Application.Current.Dispatcher.Invoke(
+                () => { FileMenu.Items.Add(addMenuItemEvent.MenuItem); });
             
         }
 

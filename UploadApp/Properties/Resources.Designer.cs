@@ -97,6 +97,15 @@ namespace UploadApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        public static string Text_Exit {
+            get {
+                return ResourceManager.GetString("Text_Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to File.
         /// </summary>
         public static string Text_File {

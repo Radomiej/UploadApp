@@ -133,5 +133,10 @@ namespace WpfPluginBase
                 }
             }
         }
+
+        public void AddTranslateElement(MenuItem menuItem)
+        {
+            _menuItems.Add(menuItem, menuItem.Header.ToString());
+        }
     }
 }

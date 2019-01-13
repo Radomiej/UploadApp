@@ -22,7 +22,6 @@ namespace PluginMusicPlayer
             InitializeComponent();
             SimpleEventBus.GetDefaultEventBus().Register(this);
 
-            AddMenuPlayButton();
         }
 
         private void AddMenuPlayButton()
@@ -32,12 +31,14 @@ namespace PluginMusicPlayer
             
             AddMenuItemEvent addMenuItemEvent = new AddMenuItemEvent("file", menuItem, Properties.Resources.ResourceManager);
             SimpleEventBus.GetDefaultEventBus().Post(addMenuItemEvent, TimeSpan.Zero);
-            
+
+            _i18NEngine.AddTranslateElement(menuItem);
         }
 
         private void MusicPlayerWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
             _i18NEngine = new I18NEngine(this, Properties.Resources.ResourceManager);
+            AddMenuPlayButton();
             _i18NEngine.UpdateLanguage();
         }
     }

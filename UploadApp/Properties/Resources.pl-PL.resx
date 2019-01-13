@@ -51,4 +51,7 @@
     <data name="Text_Tools" xml:space="preserve">
         <value>Narzędzia</value>
     </data>
+    <data name="Text_Exit" xml:space="preserve">
+        <value>Wyjście</value>
+    </data>
 </root>

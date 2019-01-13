@@ -10,15 +10,15 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Width="Auto">
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
                 <Menu Width="Auto" Height="20" Margin="0,0,10,0">
-                    <MenuItem Header="Text_File">
-                        <MenuItem x:Name="AppExit" Header="E_xit" HorizontalAlignment="Left" Width="140"
+                    <MenuItem x:Name="FileMenu" Header="Text_File">
+                        <MenuItem x:Name="AppExit" Header="Text_Exit" HorizontalAlignment="Left" Width="140"
                                   Click="AppExit_Click" />
                     </MenuItem>
                     
-                    <MenuItem Header="Text_Tools">
+                    <MenuItem Header="Text_Tools" Visibility="Hidden">
                     </MenuItem>
                     
-                    <MenuItem Header="Text_Help">
+                    <MenuItem Header="Text_Help" Visibility="Hidden">
                     </MenuItem>
                     
                     <MenuItem Header="Text_Language">

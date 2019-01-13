@@ -20,22 +20,14 @@ namespace UploadApp
         public MainWindow()
         {
             InitializeComponent();
-            LoadMenus();
             SimpleEventBus.GetDefaultEventBus().Register(this);
-//            LoadPlugins();
-        }
-
-        private void LoadMenus()
-        {
-//            Button button = new Button();
-//            button.Content = "TEST";
-//            MenuToolbar.Content = button;
+            LoadPlugins();
         }
 
 
         private void LoadPlugins()
         {
-            string pluginPath = @"H:\Dokumenty\Kod\C#\UploadKlient\UploadApp\PluginMusicPlayer\bin\Debug";
+            string pluginPath = @"H:\Dokumenty\Kod\C#\UploadApp\UploadApp\PluginMusicPlayer\bin\Debug\";
             WpfConsole.WriteLine("Load Plugins from: " + pluginPath);
             PluginEngine pluginEngine = new PluginEngine();
             pluginEngine.FindPlugins(pluginPath);

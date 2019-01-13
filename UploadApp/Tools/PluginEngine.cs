@@ -15,7 +15,7 @@ namespace UploadClient.Tools
         
         public void FindPlugins(string path)
         {
-            if (File.Exists(path))
+            if (!Directory.Exists(path))
             {
                 WpfConsole.WriteLine("Plugin path: " + path + " NOT FOUND!");
                 return;
