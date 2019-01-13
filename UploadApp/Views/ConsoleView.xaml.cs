@@ -39,7 +39,7 @@ namespace UploadApp.Views
         }
 
         [EventSubscriber]
-        public void HandleOutputEvent(IncomingConsoleOutputEvent outputEvent)
+        public void HandleOutputEvent(ConsoleOutputEvent outputEvent)
         {
             Application.Current.Dispatcher.Invoke(
                 () => { dc.ConsoleOutput.Add(outputEvent.ConsoleOutputText); });
@@ -75,7 +75,7 @@ namespace UploadApp.Views
         {
             ConsoleOutput.Add(ConsoleInput);
             // do your stuff here.
-            SimpleEventBus.GetDefaultEventBus().Post(new IncomingConsoleInputEvent(ConsoleInput), TimeSpan.Zero);
+            SimpleEventBus.GetDefaultEventBus().Post(new ConsoleInputEvent(ConsoleInput), TimeSpan.Zero);
             ConsoleInput = String.Empty;
         }
 

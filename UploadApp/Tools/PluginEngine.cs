@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Windows;
 using EventBus;
+using UploadClient.Events;
 using WpfPluginBase;
 
 namespace UploadClient.Tools
@@ -12,6 +14,28 @@ namespace UploadClient.Tools
     {
         
         private List<string> pluginsPath = new List<string>();
+        
+        
+        [EventSubscriber]
+        public void HandleOutputEvent(ConsoleInputEvent inputEvent)
+        {
+            string outputText = inputEvent.ConsoleInputText;
+            if (outputText.StartsWith("plugin"))
+            {
+                outputText = outputText.Replace("plugin", "");
+                FindPluginInFolder(outputText);
+                Application.Current.Dispatcher.Invoke(
+                    InitializePlugins);
+               
+
+            }else if (outputText.StartsWith("plugins"))
+            {
+                outputText = outputText.Replace("plugins", "");
+                FindPlugins(outputText);
+                Application.Current.Dispatcher.Invoke(
+                    InitializePlugins);
+            }
+        }
         
         public void FindPlugins(string path)
         {
@@ -22,8 +46,18 @@ namespace UploadClient.Tools
             }
             
             //First empty the collection, we're reloading them all
-            pluginsPath.Clear();
+//            pluginsPath.Clear();
+            foreach (string directoryOn in Directory.GetDirectories(path))
+            {
+                FindPluginInFolder(directoryOn);
+            }
 
+
+            WpfConsole.WriteLine("Finds " + pluginsPath.Count + " plugins");
+        }
+
+        public void FindPluginInFolder(string path)
+        {
             //Go through all the files in the plugin directory
             foreach (string fileOn in Directory.GetFiles(path))
             {
@@ -37,12 +71,11 @@ namespace UploadClient.Tools
                     WpfConsole.WriteLine("Find plugin: " + file.Name);
                 }
             }
-            
-            WpfConsole.WriteLine("Finds " + pluginsPath.Count + " plugins");
         }
-
-        public void InitializePlugins(string pluginPath)
+        
+        public void InitializePlugins()
         {
+          
             foreach (string fileOn in pluginsPath)
             {
                 Assembly assembly = Assembly.LoadFrom(fileOn);

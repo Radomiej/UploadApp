@@ -15,10 +15,10 @@
                                   Click="AppExit_Click" />
                     </MenuItem>
                     
-                    <MenuItem Header="Text_Tools" Visibility="Hidden">
+                    <MenuItem Header="Text_Tools" Visibility="Collapsed">
                     </MenuItem>
                     
-                    <MenuItem Header="Text_Help" Visibility="Hidden">
+                    <MenuItem Header="Text_Help" Visibility="Collapsed">
                     </MenuItem>
                     
                     <MenuItem Header="Text_Language">

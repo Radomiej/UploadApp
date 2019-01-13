@@ -56,8 +56,8 @@
         <Compile Include="WpfConsole.cs" />
         <Compile Include="Events\FileDeselectedEvent.cs" />
         <Compile Include="Events\FileSelectedEvent.cs" />
-        <Compile Include="Events\IncomingConsoleInputEvent.cs" />
-        <Compile Include="Events\IncomingConsoleOutputEvent.cs" />
+        <Compile Include="Events\ConsoleOutputEvent.cs" />
+        <Compile Include="Events\ConsoleInputEvent.cs" />
         <Compile Include="IBasePlugin.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

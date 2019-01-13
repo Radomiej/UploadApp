@@ -1,10 +1,10 @@
 namespace UploadClient.Events
 {
-    public class IncomingConsoleInputEvent
+    public class ConsoleInputEvent
     {
         public readonly string ConsoleInputText;
 
-        public IncomingConsoleInputEvent(string consoleInputText)
+        public ConsoleInputEvent(string consoleInputText)
         {
             ConsoleInputText = consoleInputText;
         }

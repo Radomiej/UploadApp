@@ -21,7 +21,14 @@ namespace UploadApp
         {
             InitializeComponent();
             SimpleEventBus.GetDefaultEventBus().Register(this);
-            LoadPlugins();
+//            LoadPlugins();
+            InitPluginEngine();
+        }
+
+        private void InitPluginEngine()
+        {
+            PluginEngine pluginEngine = new PluginEngine();
+            SimpleEventBus.GetDefaultEventBus().Register(pluginEngine);
         }
 
 
@@ -31,7 +38,7 @@ namespace UploadApp
             WpfConsole.WriteLine("Load Plugins from: " + pluginPath);
             PluginEngine pluginEngine = new PluginEngine();
             pluginEngine.FindPlugins(pluginPath);
-            pluginEngine.InitializePlugins(pluginPath);
+            pluginEngine.InitializePlugins();
         }
 
 

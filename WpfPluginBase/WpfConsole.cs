@@ -8,7 +8,7 @@ namespace WpfPluginBase
     {
         public static void WriteLine(string message)
         {
-            SimpleEventBus.GetDefaultEventBus().Post(new IncomingConsoleOutputEvent(message), TimeSpan.Zero);
+            SimpleEventBus.GetDefaultEventBus().Post(new ConsoleOutputEvent(message), TimeSpan.Zero);
         }
     }
 }
