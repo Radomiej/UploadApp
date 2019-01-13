@@ -54,6 +54,7 @@
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </ApplicationDefinition>
+        <Compile Include="Actions\SelectFileAction.cs" />
         <Compile Include="Models\MongoFileInfo.cs" />
         <Compile Include="Models\MuzeoFileInfo.cs" />
         <Compile Include="Models\MuzeoWaitingFileInfo.cs" />
@@ -66,6 +67,7 @@
         <Compile Include="Models\VolumeItem.cs" />
         <Compile Include="Properties\Resources.Designer.cs" />
         <Compile Include="Properties\Resources.pl-PL.Designer.cs" />
+        <Compile Include="Tools\FileChooser.cs" />
         <Compile Include="Tools\FileHelper.cs" />
         <Compile Include="Tools\PluginEngine.cs" />
         <Compile Include="Views\ConsoleView.xaml.cs">

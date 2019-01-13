@@ -2,18 +2,20 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using EventBus;
+using RepozytoriumKlient.Tools;
+using UploadApp.Actions;
 using UploadClient.Events;
 using UploadClient.Tools;
+using WpfPluginBase;
 
 namespace UploadApp.Views
 {
     public partial class UploadView : UserControl
     {
-        private string _selectedFile;
-
         public UploadView()
         {
             InitializeComponent();
+            SimpleEventBus.GetDefaultEventBus().Register(this);
         }
 
         private void FileUpload_Drop(object sender, DragEventArgs e)
@@ -28,18 +30,31 @@ namespace UploadApp.Views
                 if (files != null) HandleFileOpen(files[0]);
             }
         }
+        
+        private void UploadButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            string chooseFile = FileChooser.ChooseFile();
+            if (chooseFile == null) return;
 
+            HandleFileOpen(chooseFile);
+        }
+        
         private void HandleFileOpen(string filePath)
         {
-            if (_selectedFile != null)
-            {
-                SimpleEventBus.GetDefaultEventBus().Post(new FileDeselectedEvent(_selectedFile), TimeSpan.Zero);
-                _selectedFile = null;
-            }
-
-            _selectedFile = filePath;
-            UploadButton.Content = FileHelper.GetFileName(filePath);
-            SimpleEventBus.GetDefaultEventBus().Post(new FileSelectedEvent(filePath), TimeSpan.Zero);
+            SelectFileAction selectFileAction = new SelectFileAction(filePath);
+            SimpleEventBus.GetDefaultEventBus().Post(new DoActionEvent(selectFileAction), TimeSpan.Zero);
         }
+
+        [EventSubscriber]
+        public void HandlePropertiesChangedEvent(ContextPropertiesChangedEvent propertiesChangedEvent)
+        {
+            if (!propertiesChangedEvent.Key.Equals(SelectFileAction.ActionContextKey)) return;
+
+            string simpleFileName = FileHelper.GetFileName(propertiesChangedEvent.NewValue.ToString());
+            Application.Current.Dispatcher.Invoke(
+                () => { UploadButton.Content = simpleFileName; });
+            
+        }
+
     }
 }

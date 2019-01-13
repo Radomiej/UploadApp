@@ -58,6 +58,7 @@
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </Page>
+        <Compile Include="Actions\PlayMusicAction.cs" />
         <Compile Include="App.xaml.cs">
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
@@ -92,6 +93,17 @@
         <Project>{a3b6509d-53b5-4ed3-81e9-9310ab19278f}</Project>
         <Name>WpfPluginBase</Name>
       </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <COMReference Include="WMPLib">
+        <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+        <VersionMajor>1</VersionMajor>
+        <VersionMinor>0</VersionMinor>
+        <Lcid>0</Lcid>
+        <WrapperTool>tlbimp</WrapperTool>
+        <Isolated>False</Isolated>
+        <EmbedInteropTypes>True</EmbedInteropTypes>
+      </COMReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

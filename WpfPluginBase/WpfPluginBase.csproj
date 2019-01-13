@@ -60,8 +60,6 @@
         <Compile Include="Events\UndoActionEvent.cs" />
         <Compile Include="I18NEngine.cs" />
         <Compile Include="WpfConsole.cs" />
-        <Compile Include="Events\FileDeselectedEvent.cs" />
-        <Compile Include="Events\FileSelectedEvent.cs" />
         <Compile Include="Events\ConsoleOutputEvent.cs" />
         <Compile Include="Events\ConsoleInputEvent.cs" />
         <Compile Include="IBasePlugin.cs" />

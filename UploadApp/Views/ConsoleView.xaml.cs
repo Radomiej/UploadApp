@@ -49,7 +49,7 @@ namespace UploadApp.Views
     public class ConsoleContent : INotifyPropertyChanged
     {
         string consoleInput = string.Empty;
-        ObservableCollection<string> consoleOutput = new ObservableCollection<string>() {"Application start..."};
+        ObservableCollection<string> consoleOutput = new ObservableCollection<string>() {"Application start...", "Type: plugin <FilePath> to load plugin"};
 
         public string ConsoleInput
         {

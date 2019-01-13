@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="Music Player" Height="350" Width="525" Loaded="MusicPlayerWindow_OnLoaded">
     <Grid>
-        <Button Name="ButtonPlay" Content="Text_Play"></Button>
+        <Button Name="ButtonPlay" Content="Text_Play" IsEnabled="False" Click="ButtonPlay_OnClick"></Button>
     </Grid>
 </Window>

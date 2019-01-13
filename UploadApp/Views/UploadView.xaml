@@ -10,13 +10,13 @@
         <StackPanel Orientation="Vertical">
 
             <Button Name="UploadButton" Drop="FileUpload_Drop" AllowDrop="true" Height="60px"
-                    Content="Text_Select_File_To_Upload" />
+                    Content="Text_Select_File_To_Upload" Click="UploadButton_OnClick"/>
             <Grid>
                 <ProgressBar Name="pbStatus" Minimum="0" Maximum="100" Value="0" Height="20px" />
                 <TextBlock Text="{Binding ElementName=pbStatus, Path=Value, StringFormat={}{0:0}%}"
                            HorizontalAlignment="Center" VerticalAlignment="Center" />
             </Grid>
-            <Button Name="ActionButton" Content="Text_Send" />
+            <Button Name="ActionButton" Content="Text_Send" IsEnabled="False"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -10,30 +10,34 @@ namespace WpfPluginBase.Context
         private static ContextEngine _instance;
         public static ContextEngine Instance => _instance ?? (_instance = new ContextEngine());
 
-        private Dictionary<string, object> contextData = new Dictionary<string, object>(100);
-        
+        private readonly Dictionary<string, object> _contextData = new Dictionary<string, object>(100);
+
         private ContextEngine()
         {
             // Initialize.
         }
 
-        public void setContextObject(string key, object value)
+        public void SetContextObject(string key, object value)
         {
-            object oldValue = getContextObject(key);
-            ContextPropertiesChangedEvent contextPropertiesChangedEvent = new ContextPropertiesChangedEvent(key, oldValue, value);
-            contextData.Add(key, value);
+            object oldValue = GetContextObject(key);
+            ContextPropertiesChangedEvent contextPropertiesChangedEvent =
+                new ContextPropertiesChangedEvent(key, oldValue, value);
+            
+            if (_contextData.ContainsKey(key)) _contextData[key] = value;
+            else _contextData.Add(key, value);
+            
             SimpleEventBus.GetDefaultEventBus().Post(contextPropertiesChangedEvent, TimeSpan.Zero);
         }
-        
-        public string getStringContextObject(string key)
+
+        public string GetStringContextObject(string key)
         {
-            if (!contextData.ContainsKey(key)) return "";
-            return contextData[key].ToString();
+            if (!_contextData.ContainsKey(key)) return "";
+            return _contextData[key].ToString();
         }
-        
-        public object getContextObject(string key)
+
+        public object GetContextObject(string key)
         {
-            return contextData.ContainsKey(key) ? contextData[key] : null;
+            return _contextData.ContainsKey(key) ? _contextData[key] : null;
         }
     }
 }
