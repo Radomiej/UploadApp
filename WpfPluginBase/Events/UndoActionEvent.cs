@@ -4,11 +4,9 @@ namespace UploadClient.Events
 {
     public class UndoActionEvent
     {
-        public IBaseAction ActionToUndo { get; }
 
-        public UndoActionEvent(IBaseAction actionToUndo)
+        public UndoActionEvent()
         {
-            ActionToUndo = actionToUndo;
         }
     }
 }

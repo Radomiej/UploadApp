@@ -51,6 +51,8 @@ namespace UploadApp.Views
             if (!propertiesChangedEvent.Key.Equals(SelectFileAction.ActionContextKey)) return;
 
             string simpleFileName = FileHelper.GetFileName(propertiesChangedEvent.NewValue.ToString());
+            if (simpleFileName == null || simpleFileName.Equals(""))
+                simpleFileName = Properties.Resources.Text_Select_File_To_Upload;
             Application.Current.Dispatcher.Invoke(
                 () => { UploadButton.Content = simpleFileName; });
             

@@ -160,6 +160,15 @@ namespace UploadApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Undo.
+        /// </summary>
+        public static string Text_Undo {
+            get {
+                return ResourceManager.GetString("Text_Undo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Upload Client.
         /// </summary>
         public static string Title {

@@ -28,6 +28,8 @@ namespace WpfPluginBase
         [EventSubscriber]
         public void HandleUndoActionEvent(UndoActionEvent undoActionEvent)
         {
+            if(_actions.Count == 0) return;
+            
             IBaseAction action = _actions[_actions.Count - 1];
             action.UndoAction();
             _actions.Remove(action);

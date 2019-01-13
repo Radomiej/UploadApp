@@ -58,6 +58,11 @@ namespace UploadApp.Views
             WpfConsole.WriteLine("Change localization on: " + culture.Name + " from: " + oldCulture.Name);
         }
 
-       
+
+        private void UndoAction_OnClick(object sender, RoutedEventArgs e)
+        {
+            UndoActionEvent undoActionEvent = new UndoActionEvent();
+            SimpleEventBus.GetDefaultEventBus().Post(undoActionEvent, TimeSpan.Zero);
+        }
     }
 }

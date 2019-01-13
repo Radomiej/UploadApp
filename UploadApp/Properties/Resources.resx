@@ -59,5 +59,8 @@
     <data name="Text_Exit" xml:space="preserve">
         <value>Exit</value>
     </data>
-    
+    <data name="Text_Undo" xml:space="preserve">
+        <value>Undo</value>
+    </data>
+        
 </root>

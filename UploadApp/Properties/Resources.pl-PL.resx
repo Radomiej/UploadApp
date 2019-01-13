@@ -54,4 +54,7 @@
     <data name="Text_Exit" xml:space="preserve">
         <value>Wyjście</value>
     </data>
+    <data name="Text_Undo" xml:space="preserve">
+        <value>Cofnij</value>
+    </data>
 </root>
