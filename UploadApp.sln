@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadApp", "UploadApp\UploadApp.csproj", "{E397E55B-922F-4A2D-A420-C4B678E9C967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPluginBase", "WpfPluginBase\WpfPluginBase.csproj", "{A3B6509D-53B5-4ED3-81E9-9310AB19278F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginMusicPlayer", "PluginMusicPlayer\PluginMusicPlayer.csproj", "{AE8459DD-5197-488F-9898-2B18C02C6ED3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E397E55B-922F-4A2D-A420-C4B678E9C967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E397E55B-922F-4A2D-A420-C4B678E9C967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E397E55B-922F-4A2D-A420-C4B678E9C967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E397E55B-922F-4A2D-A420-C4B678E9C967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3B6509D-53B5-4ED3-81E9-9310AB19278F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3B6509D-53B5-4ED3-81E9-9310AB19278F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3B6509D-53B5-4ED3-81E9-9310AB19278F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3B6509D-53B5-4ED3-81E9-9310AB19278F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8459DD-5197-488F-9898-2B18C02C6ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8459DD-5197-488F-9898-2B18C02C6ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8459DD-5197-488F-9898-2B18C02C6ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8459DD-5197-488F-9898-2B18C02C6ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

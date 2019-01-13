@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Title" xml:space="preserve">
+    <value>Klient Wysyłania</value>
+  </data>
+    <data name="Text_Language" xml:space="preserve">
+    <value>Język</value>
+  </data>
+    <data name="Lang_English" xml:space="preserve">
+    <value>Angielski</value>
+  </data>
+    <data name="Lang_Poland" xml:space="preserve">
+    <value>Polski</value>
+  </data>
+    <data name="Lang_German" xml:space="preserve">
+    <value>Niemiecki</value>
+  </data>
+    <data name="Text_Select_File_To_Upload" xml:space="preserve">
+    <value>Wybierz pliki do wysłania</value>
+  </data>
+    <data name="Text_Send" xml:space="preserve">
+    <value>Wyślij</value>
+  </data>
+    <data name="Text_Cancel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+    <data name="Text_Help" xml:space="preserve">
+        <value>Pomoc</value>
+    </data>
+    <data name="Text_File" xml:space="preserve">
+        <value>Plik</value>
+    </data>
+    <data name="Text_Tools" xml:space="preserve">
+        <value>Narzędzia</value>
+    </data>
+</root>

@@ -1,0 +1,33 @@
+<UserControl x:Class="UploadApp.Views.MenuToolbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:UploadApp.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="MenuToolbar_OnLoaded">
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Width="Auto">
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Menu Width="Auto" Height="20" Margin="0,0,10,0">
+                    <MenuItem Header="Text_File">
+                        <MenuItem x:Name="AppExit" Header="E_xit" HorizontalAlignment="Left" Width="140"
+                                  Click="AppExit_Click" />
+                    </MenuItem>
+                    
+                    <MenuItem Header="Text_Tools">
+                    </MenuItem>
+                    
+                    <MenuItem Header="Text_Help">
+                    </MenuItem>
+                    
+                    <MenuItem Header="Text_Language">
+                        <MenuItem x:Name="Lang_English" Header="Lang_English" HorizontalAlignment="Left" Width="140" Click="Lang_English_OnClick" />
+                        <MenuItem x:Name="Lang_Poland" Header="Lang_Poland" HorizontalAlignment="Left" Width="140" Click="Lang_Poland_OnClick"/>
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+      
+        </StackPanel>
+    </Grid>
+</UserControl>
